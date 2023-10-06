@@ -241,6 +241,10 @@ impl Panel {
     pub fn build_pick_folders(opt: &FileDialog) -> Self {
         let panel = Panel::open_panel();
 
+        if !opt.filters.is_empty() {
+            panel.add_filters(&opt);
+        }
+
         if let Some(path) = &opt.starting_directory {
             panel.set_path(path, opt.file_name.as_deref());
         }
