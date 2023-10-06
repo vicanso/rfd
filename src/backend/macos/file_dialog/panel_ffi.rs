@@ -255,7 +255,7 @@ impl Panel {
 
         panel.set_can_choose_directories(YES);
         panel.set_can_create_directories(YES);
-        panel.set_can_choose_files(NO);
+        panel.set_can_choose_files(YES);
         panel.set_allows_multiple_selection(YES);
 
         panel
@@ -280,7 +280,7 @@ impl Panel {
             panel.set_parent(parent);
         }
 
-        panel.set_can_choose_directories(YES);
+        panel.set_can_choose_directories(NO);
         panel.set_can_choose_files(YES);
         panel.set_allows_multiple_selection(YES);
 
